@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const conectionDB = async () =>  {
 
 try {
-    await mongoose.connect(`mongodb+srv://${process.env.MONGOUSERNAME}:${process.env.MONGOPASSWORD}@cluster0.ctgednd.mongodb.net/test`);
-console.log('conectado a base de datos mongo')
+    await mongoose.connect(process.env.DB_CONNECT);
+console.log('conectado a BASE DE DATOS')
 } catch (error) {
-    console.log('error al conectar')
+    console.log('error al conectar LA BASE DE DATOS')
 }
 
   
